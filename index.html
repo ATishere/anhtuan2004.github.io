@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phạm Anh Tuấn - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117; /* Màu nền tối kiểu GitHub Dark */
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff; /* Màu xanh điểm nhấn */
+            --card-bg: #161b22;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: #fff;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-title {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+        }
+
+        .tech-stack span {
+            display: inline-block;
+            background-color: #21262d; /* Màu tag */
+            color: #8b949e;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        
+        .skill-item i {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Phạm Anh Tuấn</h1>
+            <div class="subtitle">
+                🛡️ Applied IT Student @VNU-IS | Cybersecurity Enthusiast<br>
+                Đam mê: SQL Injection, Cryptography & Secure Database Design
+            </div>
+            
+            <div class="social-links">
+                <a href="mailto:email_cua_boss@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </header>
+
+        <section>
+            <h2>🚀 Dự Án Nổi Bật</h2>
+
+            <div class="project-card">
+                <a href="#" class="project-title">Ransomware-Proof Database Strategy</a>
+                <p>
+                    Xây dựng chiến lược sao lưu và phục hồi cơ sở dữ liệu có khả năng chống lại mã độc tống tiền (Ransomware).
+                    Sử dụng PostgreSQL kết hợp với giải pháp lưu trữ đối tượng MinIO để đảm bảo tính toàn vẹn dữ liệu.
+                    Thiết lập cơ chế "Immutable Backups" (Sao lưu bất biến).
+                </p>
+                <div class="tech-stack">
+                    <span>PostgreSQL</span>
+                    <span>MinIO</span>
+                    <span>Docker</span>
+                    <span>Disaster Recovery</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <a href="#" class="project-title">SQL Injection & Cryptography Lab</a>
+                <p>
+                    Thực hành chuyên sâu về các kỹ thuật tấn công SQL Injection (Blind, Union-based) và phòng chống.
+                    Triển khai các thuật toán mã hóa để bảo vệ dữ liệu nhạy cảm trong ứng dụng web.
+                    Nghiên cứu về lỗ hổng bảo mật trong môn học INS3199.
+                </p>
+                <div class="tech-stack">
+                    <span>SQL Injection</span>
+                    <span>Cryptography</span>
+                    <span>Burp Suite</span>
+                    <span>Web Security</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <a href="#" class="project-title">Android System Customization</a>
+                <p>
+                    Nghiên cứu và tùy biến hệ điều hành Origin OS 1.0 trên thiết bị Vivo S5. 
+                    Tìm hiểu cấu trúc hệ thống Android và can thiệp bằng code để tối ưu hóa hiệu năng.
+                </p>
+                <div class="tech-stack">
+                    <span>Android</span>
+                    <span>Origin OS</span>
+                    <span>System Modding</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>💪 Kỹ Năng</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Security</h3>
+                    <p>PostgreSQL, MySQL, SQL Injection Prevention</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cybersecurity</h3>
+                    <p>Cryptography, Vulnerability Assessment</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-linux"></i>
+                    <h3>System Tools</h3>
+                    <p>Linux, Docker, MinIO</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Financial Mindset</h3>
+                    <p>Long-term Investment Strategy</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎓 Học Vấn</h2>
+            <div class="project-card">
+                <div style="display:flex; justify-content:space-between;">
+                    <span class="project-title">Cử Nhân Công Nghệ Thông Tin Ứng Dụng</span>
+                    <span>2022 - Nay</span>
+                </div>
+                <p><strong>Trường Quốc tế - Đại học Quốc gia Hà Nội (VNU-IS)</strong></p>
+                <p>Tập trung nghiên cứu các giải pháp bảo mật dữ liệu và an toàn thông tin.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Phạm Anh Tuấn. Built for Security & Innovation.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
