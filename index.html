@@ -51,13 +51,31 @@
         .social-links a {
             color: var(--text-color);
             font-size: 1.5rem;
-            margin: 0 10px;
+            margin: 0 15px; /* Tăng khoảng cách icon ra chút cho thoáng */
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .social-links a:hover {
             color: var(--accent-color);
+        }
+
+        /* Nút Download CV */
+        .cv-button {
+            display: inline-block;
+            background-color: #2ea44f;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            border: 1px solid rgba(27,31,35,0.15);
+            font-size: 0.95rem;
+            transition: background-color 0.2s;
+        }
+        
+        .cv-button:hover {
+            background-color: #2c974b;
         }
 
         /* Sections */
@@ -90,14 +108,19 @@
             text-decoration: none;
         }
 
+        .tech-stack {
+            margin-top: 10px;
+        }
+
         .tech-stack span {
             display: inline-block;
-            background-color: #21262d; /* Màu tag */
+            background-color: #21262d;
             color: #8b949e;
             padding: 2px 8px;
             border-radius: 12px;
             font-size: 0.85rem;
             margin-right: 5px;
+            margin-bottom: 5px; /* Để khi xuống dòng không bị dính */
             border: 1px solid var(--border-color);
         }
 
@@ -138,15 +161,22 @@
     <div class="container">
         <header>
             <h1>Phạm Anh Tuấn</h1>
+            
+            <div style="margin-top: 10px; margin-bottom: 20px;">
+                <a href="CV_PhamAnhTuan.pdf" download class="cv-button">
+                    <i class="fas fa-file-download"></i> Tải xuống CV (PDF)
+                </a>
+            </div>
+
             <div class="subtitle">
                 🛡️ Applied IT Student @VNU-IS | Cybersecurity Enthusiast<br>
-                Đam mê: SQL Injection, Cryptography & Secure Database Design
+                Đam mê: AI Security, SQL Injection & Secure Database
             </div>
             
             <div class="social-links">
-                <a href="mailto:email_cua_boss@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:080at080@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/phạm-anh-tuấn-148b9b1a3/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ATishere" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </header>
 
@@ -154,11 +184,26 @@
             <h2>🚀 Dự Án Nổi Bật</h2>
 
             <div class="project-card">
+                <a href="#" class="project-title">AI Prompt Injection Research & Defense</a>
+                <p>
+                    Nghiên cứu các phương thức tấn công (Jailbreak) vào các mô hình ngôn ngữ lớn (LLMs) Tiếng Việt.
+                    Xây dựng tập dữ liệu Malicious Prompts và thực nghiệm kỹ thuật Fine-tuning (LoRA/DPO) để giả lập tấn công (Red Teaming).
+                    Đề xuất giải pháp lọc nội dung cho ứng dụng AI.
+                </p>
+                <div class="tech-stack">
+                    <span>AI Security</span>
+                    <span>Python</span>
+                    <span>LLM Fine-tuning</span>
+                    <span>Red Teaming</span>
+                </div>
+            </div>
+
+            <div class="project-card">
                 <a href="#" class="project-title">Ransomware-Proof Database Strategy</a>
                 <p>
-                    Xây dựng chiến lược sao lưu và phục hồi cơ sở dữ liệu có khả năng chống lại mã độc tống tiền (Ransomware).
-                    Sử dụng PostgreSQL kết hợp với giải pháp lưu trữ đối tượng MinIO để đảm bảo tính toàn vẹn dữ liệu.
-                    Thiết lập cơ chế "Immutable Backups" (Sao lưu bất biến).
+                    Xây dựng chiến lược sao lưu và phục hồi cơ sở dữ liệu có khả năng chống lại mã độc tống tiền.
+                    Sử dụng PostgreSQL kết hợp với MinIO (Object Storage) để thiết lập cơ chế "Immutable Backups" (Sao lưu bất biến).
+                    Đảm bảo quy tắc backup 3-2-1.
                 </p>
                 <div class="tech-stack">
                     <span>PostgreSQL</span>
@@ -171,9 +216,9 @@
             <div class="project-card">
                 <a href="#" class="project-title">SQL Injection & Cryptography Lab</a>
                 <p>
-                    Thực hành chuyên sâu về các kỹ thuật tấn công SQL Injection (Blind, Union-based) và phòng chống.
-                    Triển khai các thuật toán mã hóa để bảo vệ dữ liệu nhạy cảm trong ứng dụng web.
-                    Nghiên cứu về lỗ hổng bảo mật trong môn học INS3199.
+                    Thực hành chuyên sâu về các kỹ thuật tấn công SQL Injection (Blind, Union-based).
+                    Sử dụng Burp Suite để phân tích gói tin và thao tác dữ liệu.
+                    Triển khai mã hóa RSA để bảo vệ dữ liệu nhạy cảm trong ứng dụng web.
                 </p>
                 <div class="tech-stack">
                     <span>SQL Injection</span>
@@ -186,13 +231,13 @@
             <div class="project-card">
                 <a href="#" class="project-title">Android System Customization</a>
                 <p>
-                    Nghiên cứu và tùy biến hệ điều hành Origin OS 1.0 trên thiết bị Vivo S5. 
-                    Tìm hiểu cấu trúc hệ thống Android và can thiệp bằng code để tối ưu hóa hiệu năng.
+                    Nghiên cứu cấu trúc hệ điều hành Android và tùy biến ROM Origin OS trên thiết bị Vivo S5. 
+                    Can thiệp hệ thống để tối ưu hóa hiệu năng và loại bỏ bloatware.
                 </p>
                 <div class="tech-stack">
                     <span>Android</span>
-                    <span>Origin OS</span>
                     <span>System Modding</span>
+                    <span>Custom ROM</span>
                 </div>
             </div>
         </section>
@@ -201,24 +246,24 @@
             <h2>💪 Kỹ Năng</h2>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <h3>Database Security</h3>
-                    <p>PostgreSQL, MySQL, SQL Injection Prevention</p>
-                </div>
-                <div class="skill-item">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Cybersecurity</h3>
-                    <p>Cryptography, Vulnerability Assessment</p>
+                    <p>Burp Suite, OWASP Top 10, SQL Injection, AI Red Teaming</p>
                 </div>
                 <div class="skill-item">
-                    <i class="fab fa-linux"></i>
-                    <h3>System Tools</h3>
-                    <p>Linux, Docker, MinIO</p>
+                    <i class="fas fa-database"></i>
+                    <h3>Database & System</h3>
+                    <p>PostgreSQL, MySQL, Docker, MinIO, Linux (Bash)</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>Python (Scripting), SQL, HTML/CSS</p>
                 </div>
                 <div class="skill-item">
                     <i class="fas fa-chart-line"></i>
-                    <h3>Financial Mindset</h3>
-                    <p>Long-term Investment Strategy</p>
+                    <h3>Soft Skills</h3>
+                    <p>Problem Solving, Discipline (Gym/Sports), Research</p>
                 </div>
             </div>
         </section>
@@ -226,12 +271,12 @@
         <section>
             <h2>🎓 Học Vấn</h2>
             <div class="project-card">
-                <div style="display:flex; justify-content:space-between;">
+                <div style="display:flex; justify-content:space-between; flex-wrap: wrap;">
                     <span class="project-title">Cử Nhân Công Nghệ Thông Tin Ứng Dụng</span>
-                    <span>2022 - Nay</span>
+                    <span>2022 - 2026 (Dự kiến)</span>
                 </div>
                 <p><strong>Trường Quốc tế - Đại học Quốc gia Hà Nội (VNU-IS)</strong></p>
-                <p>Tập trung nghiên cứu các giải pháp bảo mật dữ liệu và an toàn thông tin.</p>
+                <p>GPA: 2.9/4.0 | Tập trung nghiên cứu: An toàn thông tin & Dữ liệu.</p>
             </div>
         </section>
 
